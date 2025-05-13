@@ -31,7 +31,7 @@ public class Departamento {
 
 // Método para dar aumentos em % a todos os funcionários de um determinado departamento como pedido.
 
-    public void aumentoDepartamento(double percentual){
+    public void aumentoDepartamento(int percentual){
         for (int i = 0; i < totalFuncionarios; i++){
             funcionarios[i].aumento(percentual);
         }
