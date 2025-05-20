@@ -44,10 +44,12 @@ public class Main {
                     }
                     System.out.println("Digite o nome do novo Departamento: ");
                     String nomeDepartamento = scanner.nextLine();
-                    empresa.adicionarDepartamento(new Departamento(nomeDepartamento));
-                    System.out.println("Seu novo Departamento foi Registrado!");
-                    System.out.println("Pressione qualquer tecla para voltar ao menu...");
-                    scanner.nextLine();
+                    boolean adicionouDepartamento = empresa.adicionarDepartamento(new Departamento(nomeDepartamento));
+                    if (adicionouDepartamento){
+                        System.out.println("Departamento Registrado!");
+                    } else {
+                        System.out.println("Não há espaço para adicionar departamentos. Limite atingido (10)");
+                    }
                 }
             // Case 3 para adicionar funcionários, conforme pedido.(verifica se a empresa foi criada e se o departamento existe)
                 case 3 -> {
